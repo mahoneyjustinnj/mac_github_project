@@ -1,22 +1,20 @@
-#install.packages(c("usethis", "gitcreds"))
-
-setwd("~/Documents/mac_github_project")
-
-# usethis::create_project("~/Documents/mac_github_project", open = TRUE)
-# --- ONE-TIME SETUP (DO NOT RUN AGAIN) ---
+# --- ONE-TIME SETUP (NEVER RUN AGAIN) ---
 # install.packages(c("usethis", "gitcreds"))
 # usethis::edit_r_environ()
-# usethis::create_project("~/Documents/mac_github_project", open = TRUE)
+# usethis::create_project("~/Documents/mac_github_project")
 # usethis::use_git_config(
 #   user.name = "mahoneyjustinnj",
 #   user.email = "jjmahoneyanalytics@gmail.com"
 # )
 # usethis::use_git()
+# usethis::use_github()
 
 
-# --- DAILY WORKFLOW ---
-# 1. Open the project:
-usethis::proj_activate("~/Documents/mac_github_project")
+# --- DAILY CODE SCRIPT (OPTIONAL SANITY CHECKS) ---
+# Run these only if you didn't open RStudio via the .Rproj file:
+setwd("~/Documents/mac_github_project")
+usethis::proj_set("~/Documents/mac_github_project")
 
-# 2. Check status anytime (optional sanity check):
+# Check status anytime:
 usethis::git_sitrep()
+
